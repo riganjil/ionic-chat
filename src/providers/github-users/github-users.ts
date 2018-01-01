@@ -30,7 +30,7 @@ export class GithubUsers {
 
   // Load all github users
   load(): Observable<User[]> {
-    return this.http.get(`${this.githubApiUrl}/users/riganjil`)
+    return this.http.get(`${this.githubApiUrl}/users`)
       .map(res => <User[]>res.json());
   }
 }
