@@ -13,6 +13,7 @@ import { OrganisationsPage } from "../pages/organisations/organisations";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { GithubUsers } from '../providers/github-users/github-users';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GithubUsersProvider
   ]
 })
 export class AppModule {}
